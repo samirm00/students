@@ -1,11 +1,12 @@
-const createStudent = (currentUser) => {
+const createStudent = (user) => {
     // create a card
     const card = document.createElement('div');
     card.classList.add('card');
+
     // create avatar
     const avatar = document.createElement('img');
-    avatar.src = currentUser.avatar;
-    avatar.alt = currentUser.name;
+    avatar.src = user.avatar;
+    avatar.alt = user.name;
     avatar.classList.add('avatar');
 
     // create a container
@@ -14,11 +15,11 @@ const createStudent = (currentUser) => {
 
     // create name
     const studentName = document.createElement('h4');
-    studentName.innerText = currentUser.name;
+    studentName.innerText = user.name;
     studentName.classList.add('name');
     // create occupation
     const occupation = document.createElement('p');
-    occupation.innerText = currentUser.occupation;
+    occupation.innerText = user.occupation;
     occupation.classList.add('occupation');
 
     // append elements
